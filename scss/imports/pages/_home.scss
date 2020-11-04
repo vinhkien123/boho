@@ -1,0 +1,365 @@
+.wapper {
+    .main {
+        background: #222;
+        padding-top: 80px;
+        .container {
+            width: 80%;
+            margin: auto;
+            .row {
+                .left {
+                    .BOHO {
+                        font-family: bb;
+                        font-size: 80px;
+                        color: white;
+                        z-index: 10;
+                        position: relative;
+                    }
+                    h3 {
+                        position: relative;
+                        font-family: bb;
+
+                        .line {
+                            width: 50px;
+                            height: 200px;
+                            position: absolute;
+                            top: -80px;
+                            left: 35px;
+                            background-color: $color-text;
+                            z-index: 1;
+                        }
+                    }
+                    .row {
+                        align-items: flex-end;
+                        .title {
+                            margin-top: 50px;
+                            .number {
+                                font-size: 190px;
+                                letter-spacing: -8px;
+                                line-height: 170px;
+                                color: $color-text;
+                                white-space: nowrap;
+                                span {
+                                    font-size: 62px;
+                                    line-height: 62px;
+                                    color: #fff;
+                                    letter-spacing: -0.5px;
+                                }
+                            }
+                            p {
+                                color: #8a8d8f;
+                                font-size: 38px;
+                            }
+                        }
+                        .image {
+                            margin-left: 30px;
+                            svg {
+                                height: 68px;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .row {
+                        align-items: flex-end;
+                        .number {
+                            color: #ecc41b;
+                            letter-spacing: -1px;
+                            white-space: nowrap;
+                            font-size: 100px;
+                            line-height: 85px;
+                        }
+                        .text {
+                            font-size: 28px;
+                            line-height: 30px;
+                            color: #fff;
+                            margin: 0;
+                        }
+                        margin-top: 36px;
+                        margin-bottom: 120px;
+                        .img {
+                            svg,
+                            img {
+                                max-width: 100%;
+                                height: 72px;
+                                margin-right: 12px;
+                                margin-left: 0;
+                                margin-bottom: 2px;
+                            }
+                        }
+                        .title {
+                            .certificate {
+                                font-size: 28px;
+                                line-height: 30px;
+                                color: #fff;
+                                margin: 0;
+                            }
+                            .achievements {
+                                color: #ecc41b;
+                                letter-spacing: -1px;
+                                white-space: nowrap;
+                                font-size: 50px;
+                                line-height: 48px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .map {
+        background: #1d1d1d;
+        position: relative;
+
+        .container {
+            padding: 80px 0;
+
+            .row {
+                @include mobile{
+                    margin: 0;
+                }
+                .projectVN {
+                    .bgLine {
+                        position: absolute;
+                        top: -270px;
+                        left: 0;
+                        z-index: 5;
+                    }
+                    .row {
+                        .mapVN {
+                            @include mobile{
+                                margin-left: 50px;
+                                margin-top: 20px;
+                            }
+                            z-index: 10;
+                            position: relative;
+                            margin-left: 20px;
+                        }
+                        .title {
+                            padding-left: 70px;
+                            z-index: 10;
+                            position: relative;
+                            p {
+                                font-size: 30px;
+                                line-height: normal;
+                                color: #e7e7e7;
+                                text-transform: none;
+                            }
+                            .table {
+                                margin-top: 30px;
+                                .city {
+                                    display: flex;
+                                    color: #e7e7e7;
+                                    width: 170px;
+                                    height: 40px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-top: 1px solid #fff;
+                                    border-left: 1px solid #fff;
+                                    border-right: 1px solid #fff;
+                                    font-size: 14px;
+                                    span {
+                                        text-align: center;
+                                        line-height: 16px;
+                                    }
+                                }
+                                .btn {
+                                    .mouse {
+                                        overflow: hidden;
+                                        span {
+                                            width: 0px;
+                                            height: 0px;
+                                            border-radius: 50%;
+                                            background-color: white;
+                                            position: absolute;
+                                            transform: translate(-50%, -50%);
+                                            transition: 1s all;
+                                            z-index: 31;
+                                        }
+                                        &:hover {
+                                            span {
+                                                width: 300px;
+                                                height: 300px;
+                                                transition: 1s all;
+                                            }
+                                            i {
+                                                .svg {
+                                                    z-index: 32;
+
+                                                    g {
+                                                        path {
+                                                            transition: 1s;
+                                                            fill: black;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    color: white;
+                                    display: table;
+                                    width: 100%;
+                                    border-collapse: collapse;
+                                    height: 50px;
+                                    .prev {
+                                        i {
+                                            .svg {
+                                                transform: translate(-50%, -50%) rotate(-180deg) scale(1);
+                                            }
+                                        }
+                                    }
+                                    .next {
+                                        i {
+                                            .svg {
+                                                transform: translate(-50%, -50%);
+                                            }
+                                        }
+                                    }
+                                    .prev,
+                                    .next {
+                                        display: table-cell;
+                                        border: 1px solid #fff;
+                                        cursor: pointer;
+                                        position: relative;
+                                        width: 50%;
+
+                                        i {
+                                            .svg {
+                                                width: 26px;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                g {
+                                                    path {
+                                                        transition: 1s all;
+                                                        fill: white;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .projectUSA {
+                    .float-right {
+                        float: right;
+                        padding-right: 70px;
+                        p {
+                            font-size: 30px;
+                            color: white;
+                        }
+                        img {
+                            margin-top: 30px;
+                        }
+                        .table {
+                            display: flex;
+                            margin-top: 30px;
+
+                            .btn {
+                                width: 140px;
+                                display: flex;
+                                height: 50px;
+                                .prev {
+                                    i {
+                                        .svg {
+                                            transform: translate(-50%, -50%) rotate(-180deg) scale(1);
+                                        }
+                                    }
+                                }
+                                .next {
+                                    i {
+                                        .svg {
+                                            transform: translate(-50%, -50%);
+                                        }
+                                    }
+                                }
+                                .prev,
+                                .next {
+                                    display: table-cell;
+                                    border: 1px solid #fff;
+                                    cursor: pointer;
+                                    position: relative;
+                                    width: 50%;
+
+                                    i {
+                                        .svg {
+                                            width: 26px;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            g {
+                                                path {
+                                                    transition: 1s all;
+                                                    fill: white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .city {
+                                cursor: pointer;
+                                border: solid 1px white;
+                                border-collapse: collapse;
+                                width: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                span {
+                                    line-height: 16px;
+                                    color: white;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                display: grid;
+                column-gap: 15px;
+                padding: 60px 0px;
+                @include mobile{
+                    grid-template-columns: 1fr;
+                    display: grid;
+                    row-gap: 15px;
+                }
+                .item {
+                    position: relative;
+                    .link {
+                        h3 {
+                            position: absolute;
+                            top: 50px;
+                            left: 15px;
+                            color: white;
+                            font-size: 46px;
+                            line-height: 40px;
+                        }
+                        .learnMore {
+                            position: absolute;
+                            right: 15px;
+                            bottom: 15px;
+                            display: flex;
+                            color: white;
+                            align-items: center;
+                            p {
+                                margin-right: 7px;
+                            }
+                            svg {
+                                width: 7px;
+                                height: 9px;
+                            }
+                        }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
